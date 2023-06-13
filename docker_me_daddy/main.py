@@ -22,7 +22,7 @@ def root():
 def some():
     return {"SOME_env_is": settings.SOME}
 
-@app.get("/healthcheck")
+@app.get("/healthcheck/")
 async def healthcheck(
         redis: Annotated[Redis, Depends(get_redis)],
         session: Annotated[AsyncSession, Depends(get_session)]
