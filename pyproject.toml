@@ -1,0 +1,19 @@
+
+[project]
+name = "docker-me-daddy"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Dzmitry Izaitka", email = "dem214overlord@gmail.com"},
+]
+dependencies = [
+    "fastapi[all]>=0.97.0",
+    "redis[hiredis]>=4.5.5",
+    "sqlalchemy[asyncio,psycopg]>=2.0.16",
+    "psycopg>=3.1.9",
+]
+requires-python = ">=3.11"
+license = {text = "MIT"}
+
+[tool.pdm.scripts]
+server = "scripts/entrypoint.sh"
